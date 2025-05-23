@@ -9,6 +9,7 @@ const Experience = dynamic(() => import('@/components/Experience'), { ssr: false
 const Skills = dynamic(() => import('@/components/Skills'), { ssr: false });
 const Services = dynamic(() => import('@/components/Services'), { ssr: false });
 const Portfolio = dynamic(() => import('@/components/Portfolio'), { ssr: false });
+const Education = dynamic(() => import('@/components/Education'), { ssr: false });
 const Contact = dynamic(() => import('@/components/Contact'), { ssr: false });
 
 export default function Home() {
@@ -45,8 +46,8 @@ export default function Home() {
               </div>
             </div>
             <div className="relative h-[400px] w-[400px] mx-auto">
-              <div></div>
-              <div className="absolute inset-0 bg-maroon-200 rounded-full transform -rotate-3 opacity-30"></div>
+              <div className="absolute inset-0 bg-maroon-100 rounded-full transform rotate-3 opacity-50"></div>
+              <div className="absolute inset-0 bg-maroon-200 rounded-full transform -rotate-3 opacity-50"></div>
               <div className="relative h-full w-full rounded-full overflow-hidden border-4 border-white shadow-xl">
                 <Image
                   src="\portfolio\public\images\profile.png"
@@ -67,6 +68,7 @@ export default function Home() {
       <Skills />
       <Services />
       <Portfolio />
+      <Education />
       <Contact />
     </main>
   );
