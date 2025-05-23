@@ -16,6 +16,13 @@ const Portfolio: React.FC = () => {
       link: 'https://github.com/Yashini-Hettiarachchi/LMS.git',
     },
     {
+      title: 'Cypress Automation Testing',
+      description: 'Comprehensive automated test suite for GymMaster application covering authentication, admin functionality, and user features using Cypress.',
+      image: 'https://placehold.co/600x400/maroon/white?text=Cypress+Testing',
+      tags: ['Cypress', 'JavaScript', 'Automation Testing', 'E2E Testing', 'QA'],
+      link: 'https://github.com/Yashini-Hettiarachchi/cypress_automation_testing.git',
+    },
+    {
       title: 'Client Management System',
       description: 'A comprehensive client management system built with MERN stack and designed using Figma.',
       image: 'https://placehold.co/600x400/maroon/white?text=Client+Management',
