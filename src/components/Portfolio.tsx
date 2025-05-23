@@ -2,8 +2,11 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useState } from 'react';
 
 const Portfolio: React.FC = () => {
+  const [imageErrors, setImageErrors] = useState<{ [key: string]: boolean }>({});
+
   const projects = [
     {
       title: 'E-Commerce Platform',
@@ -27,6 +30,10 @@ const Portfolio: React.FC = () => {
       link: '#',
     },
   ];
+
+  const handleImageError = (projectIndex: number) => {
+    setImageErrors((prev) => ({ ...prev, [projectIndex]: true }));
+  };
 
   return (
     <section id="portfolio" className="py-20">
@@ -52,13 +59,23 @@ const Portfolio: React.FC = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-white rounded-lg overflow-hidden shadow-md"
             >
-              <div className="relative h-48">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover"
-                />
+              <div className="relative h-48 bg-maroon-50">
+                {!imageErrors[index] ? (
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                    onError={() => handleImageError(index)}
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="text-4xl mb-2">💻</div>
+                      <div className="text-sm font-medium text-maroon-800">{project.title}</div>
+                    </div>
+                  </div>
+                )}
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">

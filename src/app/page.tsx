@@ -1,10 +1,14 @@
-import Navigation from '../components/Navigation';
-import About from '../components/About';
-import Experience from '../components/Experience';
-import Skills from '../components/Skills';
-import Services from '../components/Services';
-import Portfolio from '../components/Portfolio';
-import Contact from '../components/Contact';
+"use client";
+
+import dynamic from 'next/dynamic';
+
+const Navigation = dynamic(() => import('@/components/Navigation'), { ssr: false });
+const About = dynamic(() => import('@/components/About'), { ssr: false });
+const Experience = dynamic(() => import('@/components/Experience'), { ssr: false });
+const Skills = dynamic(() => import('@/components/Skills'), { ssr: false });
+const Services = dynamic(() => import('@/components/Services'), { ssr: false });
+const Portfolio = dynamic(() => import('@/components/Portfolio'), { ssr: false });
+const Contact = dynamic(() => import('@/components/Contact'), { ssr: false });
 
 export default function Home() {
   return (

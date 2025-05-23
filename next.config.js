@@ -1,10 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
   images: {
     unoptimized: true,
   },
+  output: 'export',
+  trailingSlash: true,
   basePath: process.env.NODE_ENV === 'production' ? '/yashini_portfolio' : '',
-}
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': require('path').resolve(__dirname, 'src'),
+    };
+    return config;
+  },
+};
 
-module.exports = nextConfig 
+module.exports = nextConfig; 
