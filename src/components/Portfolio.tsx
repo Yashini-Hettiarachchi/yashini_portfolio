@@ -9,6 +9,13 @@ const Portfolio: React.FC = () => {
 
   const projects = [
     {
+      title: 'Learning Management System (LMS)',
+      description: 'A Skill-Sharing & Learning Platform built with Spring Boot REST API and React, allowing users to share and learn different skills through structured learning plans.',
+      image: 'https://placehold.co/600x400/maroon/white?text=LMS',
+      tags: ['Spring Boot', 'React', 'MongoDB', 'OAuth 2.0', 'Java', 'TypeScript'],
+      link: 'https://github.com/Yashini-Hettiarachchi/LMS.git',
+    },
+    {
       title: 'Client Management System',
       description: 'A comprehensive client management system built with MERN stack and designed using Figma.',
       image: 'https://placehold.co/600x400/maroon/white?text=Client+Management',
