@@ -35,7 +35,21 @@ const Education: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Education</h2>
-          <div className="w-24 h-1 bg-maroon-700 mx-auto"></div>
+          <div className="w-24 h-1 bg-maroon-700 mx-auto mb-8"></div>
+          
+          {/* Resume Download Button */}
+          <motion.a
+            href="/Yashini_Hettiarachchi_Resume.pdf"
+            download
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-maroon-700 hover:bg-maroon-800 transition-colors duration-200"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Download Resume
+          </motion.a>
         </motion.div>
 
         <div className="space-y-8">
