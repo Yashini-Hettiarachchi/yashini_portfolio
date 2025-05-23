@@ -23,6 +23,14 @@ const Portfolio: React.FC = () => {
       link: 'https://github.com/Yashini-Hettiarachchi/cypress_automation_testing.git',
     },
     {
+      title: 'Research Project Documentation Website',
+      description: 'A modern, responsive website for managing and displaying research project documentation, featuring document preview, download capabilities, and organized sections.',
+      image: 'https://placehold.co/600x400/maroon/white?text=Research+Project',
+      tags: ['HTML5', 'CSS3', 'JavaScript', 'Font Awesome', 'Google Fonts', 'PDF.js'],
+      link: 'https://github.com/Yashini-Hettiarachchi/NVLD_project_website.git',
+      demo: 'https://yashini-hettiarachchi.github.io/NVLD_project_website/',
+    },
+    {
       title: 'Client Management System',
       description: 'A comprehensive client management system built with MERN stack and designed using Figma.',
       image: 'https://placehold.co/600x400/maroon/white?text=Client+Management',
@@ -106,14 +114,26 @@ const Portfolio: React.FC = () => {
                     </span>
                   ))}
                 </div>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block px-4 py-2 bg-maroon-700 text-white rounded-md hover:bg-maroon-800 transition-colors duration-200"
-                >
-                  View Project
-                </a>
+                <div className="flex gap-4">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-4 py-2 bg-maroon-700 text-white rounded-md hover:bg-maroon-800 transition-colors duration-200"
+                  >
+                    View Project
+                  </a>
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block px-4 py-2 border-2 border-maroon-700 text-maroon-700 rounded-md hover:bg-maroon-50 transition-colors duration-200"
+                    >
+                      Live Demo
+                    </a>
+                  )}
+                </div>
               </div>
             </motion.div>
           ))}
