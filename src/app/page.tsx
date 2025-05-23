@@ -1,16 +1,14 @@
 "use client";
 
-import dynamic from 'next/dynamic';
 import Image from 'next/image';
-
-const Navigation = dynamic(() => import('@/components/Navigation'), { ssr: false });
-const About = dynamic(() => import('@/components/About'), { ssr: false });
-const Experience = dynamic(() => import('@/components/Experience'), { ssr: false });
-const Skills = dynamic(() => import('@/components/Skills'), { ssr: false });
-const Services = dynamic(() => import('@/components/Services'), { ssr: false });
-const Portfolio = dynamic(() => import('@/components/Portfolio'), { ssr: false });
-const Education = dynamic(() => import('@/components/Education'), { ssr: false });
-const Contact = dynamic(() => import('@/components/Contact'), { ssr: false });
+import Navigation from '@/components/Navigation';
+import About from '@/components/About';
+import Experience from '@/components/Experience';
+import Skills from '@/components/Skills';
+import Services from '@/components/Services';
+import Portfolio from '@/components/Portfolio';
+import Education from '@/components/Education';
+import Contact from '@/components/Contact';
 
 export default function Home() {
   return (
@@ -43,6 +41,16 @@ export default function Home() {
                 >
                   View Projects
                 </a>
+                <a
+                  href="/Yashini_Hettiarachchi_Resume.pdf"
+                  download
+                  className="px-6 py-3 border-2 border-maroon-700 text-maroon-700 rounded-lg hover:bg-maroon-50 transition-colors duration-200 flex items-center"
+                >
+                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  Resume
+                </a>
               </div>
             </div>
             <div className="relative h-[400px] w-[400px] mx-auto">
@@ -50,7 +58,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-maroon-200 rounded-full transform -rotate-3 opacity-50"></div>
               <div className="relative h-full w-full rounded-full overflow-hidden border-4 border-white shadow-xl">
                 <Image
-                  src="\portfolio\public\images\profile.png"
+                  src="/images/profile.png"
                   alt="Yashini Hettiarachchi"
                   width={400}
                   height={400}
