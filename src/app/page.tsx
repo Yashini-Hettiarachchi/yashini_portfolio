@@ -42,7 +42,7 @@ export default function Home() {
                   View Projects
                 </a>
                 <a
-                  href="/Yashini_Hettiarachchi_Resume.pdf"
+                  href="/portfolio/public/Yashini_Hettiarachchi_Resume.pdf"
                   download
                   className="px-6 py-3 border-2 border-maroon-700 text-maroon-700 rounded-lg hover:bg-maroon-50 transition-colors duration-200 flex items-center"
                 >
