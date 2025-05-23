@@ -8,6 +8,11 @@ const Education: React.FC = () => {
       school: 'Sujatha Vidyalaya, Matara',
       period: '2005-2019',
       description: 'Primary and Secondary Education',
+      details: [
+        'G.C.E. Advanced Level (A/L) - Physical Science Stream',
+        '2018: 3S passes',
+        '2019: 3C passes'
+      ]
     },
   ];
 
@@ -39,7 +44,14 @@ const Education: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900">{edu.school}</h3>
                 <span className="text-maroon-700 font-medium mt-2 md:mt-0">{edu.period}</span>
               </div>
-              <p className="text-gray-600">{edu.description}</p>
+              <p className="text-gray-600 mb-4">{edu.description}</p>
+              {edu.details && (
+                <ul className="list-disc list-inside space-y-2 text-gray-600">
+                  {edu.details.map((detail, idx) => (
+                    <li key={idx} className="text-gray-600">{detail}</li>
+                  ))}
+                </ul>
+              )}
             </motion.div>
           ))}
         </div>
