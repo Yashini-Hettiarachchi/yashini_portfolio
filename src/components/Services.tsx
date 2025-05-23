@@ -2,30 +2,30 @@
 
 import { motion } from 'framer-motion';
 import {
-  CodeBracketIcon,
   BeakerIcon,
-  CommandLineIcon,
+  CodeBracketIcon,
+  UserGroupIcon,
 } from '@heroicons/react/24/outline';
 
 const Services: React.FC = () => {
   const services = [
     {
-      title: 'Web Development',
+      title: 'Quality Assurance Testing',
       description:
-        'Creating modern, responsive, and user-friendly web applications using the latest technologies.',
-      icon: CodeBracketIcon,
+        'Comprehensive testing services including manual testing, automation testing, API testing, and performance testing to ensure software quality and reliability.',
+      icon: BeakerIcon,
     },
     {
-      title: 'Quality Assurance',
+      title: 'Web & Software Development',
       description:
-        'Ensuring software quality through comprehensive testing and quality assurance processes.',
-      icon: BeakerIcon,
+        'Full-stack development services using MERN stack, Spring Boot, and other modern technologies to create robust and scalable applications.',
+      icon: CodeBracketIcon,
     },
     {
       title: 'Project Management',
       description:
-        'Managing projects efficiently using agile methodologies and best practices.',
-      icon: CommandLineIcon,
+        'Expert project management services including team coordination, task planning, and implementation of agile methodologies for successful project delivery.',
+      icon: UserGroupIcon,
     },
   ];
 
@@ -51,7 +51,7 @@ const Services: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white p-6 rounded-lg shadow-md"
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200"
             >
               <service.icon className="w-12 h-12 text-maroon-700 mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">

@@ -5,20 +5,20 @@ import { motion } from 'framer-motion';
 const Skills: React.FC = () => {
   const skills = [
     {
-      category: 'Programming Languages',
-      items: ['JavaScript', 'TypeScript', 'Python', 'Java'],
+      category: 'Quality Assurance',
+      items: ['Manual Testing', 'Automation Testing', 'JIRA', 'Cypress', 'Selenium', 'Appium', 'Postman', 'JMeter'],
     },
     {
-      category: 'Web Technologies',
-      items: ['React', 'Next.js', 'HTML5', 'CSS3', 'Tailwind CSS'],
+      category: 'Development',
+      items: ['MERN Stack', 'HTML', 'CSS', 'JavaScript', 'Spring Boot', 'MySQL', 'Oracle'],
     },
     {
-      category: 'Testing & QA',
-      items: ['Jest', 'Cypress', 'Selenium', 'Manual Testing'],
+      category: 'Tools',
+      items: ['Figma', 'Trello', 'Excel'],
     },
     {
-      category: 'Tools & Others',
-      items: ['Git', 'Docker', 'Agile', 'JIRA'],
+      category: 'Soft Skills',
+      items: ['Project Planning', 'Team Collaboration', 'Problem-solving'],
     },
   ];
 
@@ -44,7 +44,7 @@ const Skills: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-gray-50 p-6 rounded-lg"
+              className="bg-gray-50 p-6 rounded-lg hover:shadow-md transition-shadow duration-200"
             >
               <h3 className="text-xl font-semibold text-maroon-700 mb-4">
                 {skillGroup.category}
@@ -53,7 +53,7 @@ const Skills: React.FC = () => {
                 {skillGroup.items.map((skill, skillIndex) => (
                   <span
                     key={skillIndex}
-                    className="px-3 py-1 bg-maroon-100 text-maroon-700 rounded-full text-sm"
+                    className="px-3 py-1 bg-maroon-100 text-maroon-700 rounded-full text-sm hover:bg-maroon-200 transition-colors duration-200"
                   >
                     {skill}
                   </span>

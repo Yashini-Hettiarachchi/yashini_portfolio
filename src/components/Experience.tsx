@@ -5,16 +5,28 @@ import { motion } from 'framer-motion';
 const Experience: React.FC = () => {
   const experiences = [
     {
-      title: 'Quality Assurance Intern',
-      company: 'Tech Company',
-      period: '2023 - Present',
-      description: 'Working on software testing and quality assurance processes.',
+      title: 'Project Manager & Development Service',
+      company: 'Raxwo Pvt Ltd',
+      period: 'Apr 2025 – Apr 2026',
+      description: 'Leading project management and development initiatives.',
     },
     {
-      title: 'Web Development Intern',
-      company: 'Digital Agency',
-      period: '2022 - 2023',
-      description: 'Developed and maintained web applications using modern technologies.',
+      title: 'Intern – Software Engineer',
+      company: 'Gamage Recruiters',
+      period: 'Dec 2024 – Present',
+      description: 'Working on software development and implementation.',
+    },
+    {
+      title: 'Intern – QA',
+      company: 'Kayble Zone',
+      period: 'Mar 2024 – Dec 2024',
+      description: 'Quality assurance and testing responsibilities.',
+    },
+    {
+      title: 'Intern – QA',
+      company: 'Bluechip Technologies Asia',
+      period: 'Jan 2024 – Jul 2024',
+      description: 'Quality assurance and testing responsibilities.',
     },
   ];
 
@@ -40,7 +52,7 @@ const Experience: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white p-6 rounded-lg shadow-md"
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200"
             >
               <h3 className="text-xl font-semibold text-maroon-700 mb-2">
                 {exp.title}

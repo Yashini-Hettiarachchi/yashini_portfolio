@@ -25,7 +25,7 @@ export default function Home() {
                 <span className="text-maroon-700">Yashini Hettiarachchi</span>
               </h1>
               <p className="text-xl text-gray-600">
-                Final-year IT undergraduate specializing in Quality Assurance,
+                A passionate and motivated IT graduate from Sri Lanka, specializing in Quality Assurance,
                 Web Development, and Project Management
               </p>
               <div className="flex space-x-4">
@@ -46,11 +46,12 @@ export default function Home() {
             <div className="relative h-[400px] w-[400px] mx-auto">
               <div className="absolute inset-0 bg-maroon-100 rounded-full transform rotate-3"></div>
               <div className="absolute inset-0 bg-maroon-200 rounded-full transform -rotate-3"></div>
-              <div className="relative h-full w-full rounded-full overflow-hidden border-4 border-white shadow-xl bg-gradient-to-br from-maroon-100 to-maroon-200 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-6xl mb-4">👋</div>
-                  <div className="text-xl font-medium text-maroon-800">Welcome!</div>
-                </div>
+              <div className="relative h-full w-full rounded-full overflow-hidden border-4 border-white shadow-xl">
+                <img
+                  src="/profile.jpg"
+                  alt="Yashini Hettiarachchi"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>

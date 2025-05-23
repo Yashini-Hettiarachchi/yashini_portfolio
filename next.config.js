@@ -12,6 +12,7 @@ const nextConfig = {
   output: 'export',
   trailingSlash: true,
   basePath: process.env.NODE_ENV === 'production' ? '/yashini_portfolio' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/yashini_portfolio/' : '',
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,

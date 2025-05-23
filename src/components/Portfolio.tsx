@@ -9,25 +9,25 @@ const Portfolio: React.FC = () => {
 
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce platform built with Next.js and MongoDB.',
-      image: 'https://placehold.co/600x400/maroon/white?text=E-Commerce',
-      tags: ['Next.js', 'MongoDB', 'Tailwind CSS'],
-      link: '#',
+      title: 'Client Management System',
+      description: 'A comprehensive client management system built with MERN stack and designed using Figma.',
+      image: 'https://placehold.co/600x400/maroon/white?text=Client+Management',
+      tags: ['MERN Stack', 'Figma', 'MongoDB', 'Express', 'React', 'Node.js'],
+      link: 'https://github.com/Yashini-Hettiarachchi',
     },
     {
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates.',
-      image: 'https://placehold.co/600x400/maroon/white?text=Task+App',
-      tags: ['React', 'Firebase', 'Material-UI'],
-      link: '#',
+      title: 'Automated Testing Framework',
+      description: 'An automated testing framework for web applications using Cypress and Selenium.',
+      image: 'https://placehold.co/600x400/maroon/white?text=Testing+Framework',
+      tags: ['Cypress', 'Selenium', 'JavaScript', 'QA Automation'],
+      link: 'https://github.com/Yashini-Hettiarachchi',
     },
     {
-      title: 'Portfolio Website',
-      description: 'A modern portfolio website showcasing projects and skills.',
-      image: 'https://placehold.co/600x400/maroon/white?text=Portfolio',
-      tags: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
-      link: '#',
+      title: 'QA Dashboard',
+      description: 'A comprehensive QA dashboard for tracking and managing software testing processes.',
+      image: 'https://placehold.co/600x400/maroon/white?text=QA+Dashboard',
+      tags: ['React', 'Node.js', 'MongoDB', 'JIRA API'],
+      link: 'https://github.com/Yashini-Hettiarachchi',
     },
   ];
 
@@ -57,7 +57,7 @@ const Portfolio: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-lg overflow-hidden shadow-md"
+              className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-200"
             >
               <div className="relative h-48 bg-maroon-50">
                 {!imageErrors[index] ? (
@@ -86,7 +86,7 @@ const Portfolio: React.FC = () => {
                   {project.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="px-3 py-1 bg-maroon-100 text-maroon-700 rounded-full text-sm"
+                      className="px-3 py-1 bg-maroon-100 text-maroon-700 rounded-full text-sm hover:bg-maroon-200 transition-colors duration-200"
                     >
                       {tag}
                     </span>
@@ -94,7 +94,9 @@ const Portfolio: React.FC = () => {
                 </div>
                 <a
                   href={project.link}
-                  className="inline-block px-4 py-2 bg-maroon-700 text-white rounded-md hover:bg-maroon-800 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-4 py-2 bg-maroon-700 text-white rounded-md hover:bg-maroon-800 transition-colors duration-200"
                 >
                   View Project
                 </a>

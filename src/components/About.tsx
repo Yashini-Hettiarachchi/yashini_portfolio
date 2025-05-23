@@ -26,13 +26,10 @@ const About: React.FC = () => {
             className="space-y-6"
           >
             <p className="text-gray-600">
-              I am a final-year IT undergraduate with a passion for creating
-              innovative solutions. My expertise lies in Quality Assurance, Web
-              Development, and Project Management.
+              Yashini Hettiarachchi is a passionate and motivated IT graduate from Sri Lanka, currently completing her BSc (Hons) in Information Technology at SLIIT, graduating in 2025. Her journey into IT blends a love for problem-solving, testing, and creative development.
             </p>
             <p className="text-gray-600">
-              I believe in continuous learning and staying up-to-date with the
-              latest technologies and best practices in the industry.
+              She is fluent in English and currently preparing for the A2 level in German at the Goethe Institute.
             </p>
           </motion.div>
 
@@ -47,13 +44,18 @@ const About: React.FC = () => {
               <h3 className="text-xl font-semibold text-maroon-700 mb-4">
                 Education
               </h3>
-              <p className="text-gray-600">
-                Bachelor of Science in Information Technology
-                <br />
-                University of Sri Jayewardenepura
-                <br />
-                2020 - Present
-              </p>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-medium text-gray-900">BSc (Hons) in Information Technology</h4>
+                  <p className="text-gray-600">SLIIT</p>
+                  <p className="text-gray-500 text-sm">Expected mid-2025</p>
+                </div>
+                <div>
+                  <h4 className="font-medium text-gray-900">German Language</h4>
+                  <p className="text-gray-600">Goethe Institute</p>
+                  <p className="text-gray-500 text-sm">A1 Complete, A2 in progress</p>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
