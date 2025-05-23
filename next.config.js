@@ -2,6 +2,12 @@
 const nextConfig = {
   images: {
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
   },
   output: 'export',
   trailingSlash: true,
@@ -12,6 +18,14 @@ const nextConfig = {
       '@': require('path').resolve(__dirname, 'src'),
     };
     return config;
+  },
+  experimental: {
+    turbo: {
+      rules: {
+        // Configure Turbopack rules here
+        '*.{js,jsx,ts,tsx}': ['swc'],
+      },
+    },
   },
 };
 
