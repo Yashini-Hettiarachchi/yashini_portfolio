@@ -45,7 +45,7 @@ export default function Home() {
               </div>
             </div>
             <div className="relative h-[400px] w-[400px] mx-auto">
-              <div className="absolute inset-0 bg-maroon-100 rounded-full transform rotate-3 opacity-30"></div>
+              <div></div>
               <div className="absolute inset-0 bg-maroon-200 rounded-full transform -rotate-3 opacity-30"></div>
               <div className="relative h-full w-full rounded-full overflow-hidden border-4 border-white shadow-xl">
                 <Image
