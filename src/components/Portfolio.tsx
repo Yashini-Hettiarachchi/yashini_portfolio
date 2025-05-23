@@ -1,37 +1,35 @@
 "use client";
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
-const projects = [
-  {
-    title: 'Client Management System',
-    description:
-      'A comprehensive client management system built with MERN stack and designed using Figma.',
-    technologies: ['MERN Stack', 'Figma', 'MongoDB', 'Express.js', 'React', 'Node.js'],
-    github: 'https://github.com/Yashini-Hettiarachchi/client-management-system',
-    demo: '#',
-  },
-  {
-    title: 'Automated Testing Framework',
-    description:
-      'An automated testing framework using Cypress and Selenium for web application testing.',
-    technologies: ['Cypress', 'Selenium', 'JavaScript', 'Node.js'],
-    github: 'https://github.com/Yashini-Hettiarachchi/automated-testing-framework',
-    demo: '#',
-  },
-  {
-    title: 'QA Dashboard',
-    description:
-      'A comprehensive dashboard for tracking and managing quality assurance metrics and test results.',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Chart.js'],
-    github: 'https://github.com/Yashini-Hettiarachchi/qa-dashboard',
-    demo: '#',
-  },
-];
+const Portfolio: React.FC = () => {
+  const projects = [
+    {
+      title: 'E-Commerce Platform',
+      description: 'A full-stack e-commerce platform built with Next.js and MongoDB.',
+      image: '/images/project1.jpg',
+      tags: ['Next.js', 'MongoDB', 'Tailwind CSS'],
+      link: '#',
+    },
+    {
+      title: 'Task Management App',
+      description: 'A collaborative task management application with real-time updates.',
+      image: '/images/project2.jpg',
+      tags: ['React', 'Firebase', 'Material-UI'],
+      link: '#',
+    },
+    {
+      title: 'Portfolio Website',
+      description: 'A modern portfolio website showcasing projects and skills.',
+      image: '/images/project3.jpg',
+      tags: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
+      link: '#',
+    },
+  ];
 
-const Portfolio = () => {
   return (
-    <section id="portfolio" className="py-20 bg-white">
+    <section id="portfolio" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -52,49 +50,37 @@ const Portfolio = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
+              className="bg-white rounded-lg overflow-hidden shadow-md"
             >
-              <div className="relative h-48 w-full bg-gradient-to-br from-maroon-100 to-maroon-200">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-4xl mb-2">💻</div>
-                    <div className="text-sm font-medium text-maroon-800">{project.title}</div>
-                  </div>
-                </div>
+              <div className="relative h-48">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-maroon-700 mb-2">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   {project.title}
                 </h3>
                 <p className="text-gray-600 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech, techIndex) => (
+                  {project.tags.map((tag, tagIndex) => (
                     <span
-                      key={techIndex}
+                      key={tagIndex}
                       className="px-3 py-1 bg-maroon-100 text-maroon-700 rounded-full text-sm"
                     >
-                      {tech}
+                      {tag}
                     </span>
                   ))}
                 </div>
-                <div className="flex space-x-4">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-maroon-700 hover:text-maroon-800 font-medium"
-                  >
-                    View Code
-                  </a>
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-maroon-700 hover:text-maroon-800 font-medium"
-                  >
-                    Live Demo
-                  </a>
-                </div>
+                <a
+                  href={project.link}
+                  className="inline-block px-4 py-2 bg-maroon-700 text-white rounded-md hover:bg-maroon-800 transition-colors"
+                >
+                  View Project
+                </a>
               </div>
             </motion.div>
           ))}

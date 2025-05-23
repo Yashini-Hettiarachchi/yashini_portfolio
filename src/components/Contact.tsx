@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 import {
   EnvelopeIcon,
   PhoneIcon,
-  GlobeAltIcon,
+  MapPinIcon,
 } from '@heroicons/react/24/outline';
 
-const Contact = () => {
+const Contact: React.FC = () => {
   return (
     <section id="contact" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,39 +22,42 @@ const Contact = () => {
           <div className="w-24 h-1 bg-maroon-700 mx-auto"></div>
         </motion.div>
 
-        <div className="flex flex-col items-center space-y-8">
-          <div className="text-center">
-            <h3 className="text-xl font-semibold text-maroon-700 mb-4">Get in Touch</h3>
-            <p className="text-gray-600 mb-6">
-              Feel free to reach out to me for any questions or opportunities.<br />
-              I&apos;ll get back to you as soon as possible.
-            </p>
-            <div className="space-y-4">
-              <a
-                href="mailto:yashinihettiarachchi99@gmail.com"
-                className="flex items-center justify-center text-gray-600 hover:text-maroon-700"
-              >
-                <EnvelopeIcon className="w-6 h-6 mr-3" />
-                yashinihettiarachchi99@gmail.com
-              </a>
-              <a
-                href="tel:+94705518090"
-                className="flex items-center justify-center text-gray-600 hover:text-maroon-700"
-              >
-                <PhoneIcon className="w-6 h-6 mr-3" />
-                +94 70 551 8090
-              </a>
-              <a
-                href="https://linkedin.com/in/yashini-hettiarachchi-757441217"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center text-gray-600 hover:text-maroon-700"
-              >
-                <GlobeAltIcon className="w-6 h-6 mr-3" />
-                linkedin.com/in/yashini-hettiarachchi-757441217
-              </a>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="bg-white p-6 rounded-lg shadow-md text-center"
+          >
+            <EnvelopeIcon className="w-12 h-12 text-maroon-700 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">Email</h3>
+            <p className="text-gray-600">contact@example.com</p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="bg-white p-6 rounded-lg shadow-md text-center"
+          >
+            <PhoneIcon className="w-12 h-12 text-maroon-700 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">Phone</h3>
+            <p className="text-gray-600">+1 (555) 123-4567</p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="bg-white p-6 rounded-lg shadow-md text-center"
+          >
+            <MapPinIcon className="w-12 h-12 text-maroon-700 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">Location</h3>
+            <p className="text-gray-600">New York, NY</p>
+          </motion.div>
         </div>
       </div>
     </section>
