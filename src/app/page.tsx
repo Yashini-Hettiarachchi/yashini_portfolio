@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 
 const Navigation = dynamic(() => import('@/components/Navigation'), { ssr: false });
 const About = dynamic(() => import('@/components/About'), { ssr: false });
@@ -44,13 +45,16 @@ export default function Home() {
               </div>
             </div>
             <div className="relative h-[400px] w-[400px] mx-auto">
-              <div className="absolute inset-0 bg-maroon-100 rounded-full transform rotate-3"></div>
-              <div className="absolute inset-0 bg-maroon-200 rounded-full transform -rotate-3"></div>
+              <div className="absolute inset-0 bg-maroon-100 rounded-full transform rotate-3 opacity-50"></div>
+              <div className="absolute inset-0 bg-maroon-200 rounded-full transform -rotate-3 opacity-50"></div>
               <div className="relative h-full w-full rounded-full overflow-hidden border-4 border-white shadow-xl">
-                <img
+                <Image
                   src="/images/profile.jpg"
                   alt="Yashini Hettiarachchi"
+                  width={400}
+                  height={400}
                   className="w-full h-full object-cover"
+                  priority
                 />
               </div>
             </div>
