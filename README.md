@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Yashini Hettiarachchi's Portfolio Website
+
+A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS.
+
+## Features
+
+- Responsive design that works on all devices
+- Modern UI with smooth animations
+- Sections for About, Experience, Skills, Services, Portfolio, and Contact
+- Contact form for easy communication
+- SEO optimized
+- Fast loading and performance
+
+## Tech Stack
+
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Heroicons
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Yashini-Hettiarachchi/portfolio.git
+   cd portfolio
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   ├── About.tsx
+│   ├── Contact.tsx
+│   ├── Experience.tsx
+│   ├── Navigation.tsx
+│   ├── Portfolio.tsx
+│   ├── Services.tsx
+│   └── Skills.tsx
+└── styles/
+    └── globals.css
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Customization
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Update the content in each component to match your information
+2. Replace placeholder images in the `public` directory
+3. Modify the color scheme in `tailwind.config.ts`
+4. Update the contact form handling in `Contact.tsx`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deployment
 
-## Learn More
+The site can be easily deployed to Vercel:
 
-To learn more about Next.js, take a look at the following resources:
+1. Push your code to GitHub
+2. Import the project in Vercel
+3. Deploy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+MIT License - feel free to use this template for your own portfolio!
 
-## Deploy on Vercel
+## Contact
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Yashini Hettiarachchi
+- Email: yashinihettiarachchi99@gmail.com
+- LinkedIn: [linkedin.com/in/yashini-hettiarachchi-757441217](https://linkedin.com/in/yashini-hettiarachchi-757441217)
+- GitHub: [github.com/Yashini-Hettiarachchi](https://github.com/Yashini-Hettiarachchi)
