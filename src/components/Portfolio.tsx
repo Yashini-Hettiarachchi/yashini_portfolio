@@ -1,14 +1,12 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 
 const projects = [
   {
     title: 'Client Management System',
     description:
       'A comprehensive client management system built with MERN stack and designed using Figma.',
-    image: '/project-placeholder-1.jpg',
     technologies: ['MERN Stack', 'Figma', 'MongoDB', 'Express.js', 'React', 'Node.js'],
     github: 'https://github.com/Yashini-Hettiarachchi/client-management-system',
     demo: '#',
@@ -17,7 +15,6 @@ const projects = [
     title: 'Automated Testing Framework',
     description:
       'An automated testing framework using Cypress and Selenium for web application testing.',
-    image: '/project-placeholder-2.jpg',
     technologies: ['Cypress', 'Selenium', 'JavaScript', 'Node.js'],
     github: 'https://github.com/Yashini-Hettiarachchi/automated-testing-framework',
     demo: '#',
@@ -26,7 +23,6 @@ const projects = [
     title: 'QA Dashboard',
     description:
       'A comprehensive dashboard for tracking and managing quality assurance metrics and test results.',
-    image: '/project-placeholder-3.jpg',
     technologies: ['React', 'Node.js', 'MongoDB', 'Chart.js'],
     github: 'https://github.com/Yashini-Hettiarachchi/qa-dashboard',
     demo: '#',
@@ -58,13 +54,13 @@ const Portfolio = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
             >
-              <div className="relative h-48 w-full">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover"
-                />
+              <div className="relative h-48 w-full bg-gradient-to-br from-maroon-100 to-maroon-200">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="text-4xl mb-2">💻</div>
+                    <div className="text-sm font-medium text-maroon-800">{project.title}</div>
+                  </div>
+                </div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-maroon-700 mb-2">

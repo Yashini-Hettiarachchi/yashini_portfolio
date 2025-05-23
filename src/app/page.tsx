@@ -1,11 +1,10 @@
-import Navigation from '@/components/Navigation';
-import About from '@/components/About';
-import Experience from '@/components/Experience';
-import Skills from '@/components/Skills';
-import Services from '@/components/Services';
-import Portfolio from '@/components/Portfolio';
-import Contact from '@/components/Contact';
-import Image from 'next/image';
+import Navigation from '../components/Navigation';
+import About from '../components/About';
+import Experience from '../components/Experience';
+import Skills from '../components/Skills';
+import Services from '../components/Services';
+import Portfolio from '../components/Portfolio';
+import Contact from '../components/Contact';
 
 export default function Home() {
   return (
@@ -18,7 +17,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900">
-                Hi, I'm{' '}
+                Hi, I&apos;m{' '}
                 <span className="text-maroon-700">Yashini Hettiarachchi</span>
               </h1>
               <p className="text-xl text-gray-600">
@@ -43,15 +42,11 @@ export default function Home() {
             <div className="relative h-[400px] w-[400px] mx-auto">
               <div className="absolute inset-0 bg-maroon-100 rounded-full transform rotate-3"></div>
               <div className="absolute inset-0 bg-maroon-200 rounded-full transform -rotate-3"></div>
-              <div className="relative h-full w-full rounded-full overflow-hidden border-4 border-white shadow-xl">
-                {/* Replace with actual profile picture */}
-                <Image
-                  src="/profile-placeholder.jpg"
-                  alt="Yashini Hettiarachchi"
-                  fill
-                  className="object-cover"
-                  priority
-                />
+              <div className="relative h-full w-full rounded-full overflow-hidden border-4 border-white shadow-xl bg-gradient-to-br from-maroon-100 to-maroon-200 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="text-6xl mb-4">👋</div>
+                  <div className="text-xl font-medium text-maroon-800">Welcome!</div>
+                </div>
               </div>
             </div>
           </div>
