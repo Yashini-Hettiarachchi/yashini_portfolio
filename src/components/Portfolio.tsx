@@ -30,27 +30,6 @@ const Portfolio: React.FC = () => {
       link: 'https://github.com/Yashini-Hettiarachchi/NVLD_project_website.git',
       demo: 'https://yashini-hettiarachchi.github.io/NVLD_project_website/',
     },
-    {
-      title: 'Client Management System',
-      description: 'A comprehensive client management system built with MERN stack and designed using Figma.',
-      image: 'https://placehold.co/600x400/maroon/white?text=Client+Management',
-      tags: ['MERN Stack', 'Figma', 'MongoDB', 'Express', 'React', 'Node.js'],
-      link: 'https://github.com/Yashini-Hettiarachchi',
-    },
-    {
-      title: 'Automated Testing Framework',
-      description: 'An automated testing framework for web applications using Cypress and Selenium.',
-      image: 'https://placehold.co/600x400/maroon/white?text=Testing+Framework',
-      tags: ['Cypress', 'Selenium', 'JavaScript', 'QA Automation'],
-      link: 'https://github.com/Yashini-Hettiarachchi',
-    },
-    {
-      title: 'QA Dashboard',
-      description: 'A comprehensive QA dashboard for tracking and managing software testing processes.',
-      image: 'https://placehold.co/600x400/maroon/white?text=QA+Dashboard',
-      tags: ['React', 'Node.js', 'MongoDB', 'JIRA API'],
-      link: 'https://github.com/Yashini-Hettiarachchi',
-    },
   ];
 
   const handleImageError = (projectIndex: number) => {
