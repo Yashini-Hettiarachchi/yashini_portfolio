@@ -48,7 +48,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-maroon-200 rounded-full transform -rotate-3"></div>
               <div className="relative h-full w-full rounded-full overflow-hidden border-4 border-white shadow-xl">
                 <img
-                  src="/profile.jpg"
+                  src="/images/profile.jpg"
                   alt="Yashini Hettiarachchi"
                   className="w-full h-full object-cover"
                 />
