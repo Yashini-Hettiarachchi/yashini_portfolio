@@ -9,8 +9,6 @@ const Education: React.FC = () => {
       period: '2020-2024',
       description: 'Bachelor of Science in Information Technology',
       details: [
-        'Specializing in Software Engineering',
-        'Current GPA: 3.5',
         'Relevant Coursework: Software Development, Database Management, Web Development, Quality Assurance'
       ]
     },
@@ -22,7 +20,6 @@ const Education: React.FC = () => {
         'G.C.E. Advanced Level (A/L) - Physical Science Stream',
         '2018: 3S passes',
         '2019: 3C passes',
-        'G.C.E. Ordinary Level (O/L) - 9 passes'
       ]
     },
   ];
