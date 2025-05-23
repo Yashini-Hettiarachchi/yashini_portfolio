@@ -49,7 +49,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-maroon-200 rounded-full transform -rotate-3 opacity-50"></div>
               <div className="relative h-full w-full rounded-full overflow-hidden border-4 border-white shadow-xl">
                 <Image
-                  src="/images/profile.jpg"
+                  src="\portfolio\public\images\profile.png"
                   alt="Yashini Hettiarachchi"
                   width={400}
                   height={400}
